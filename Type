@@ -1,0 +1,25 @@
+public class Type {
+
+	public static void main(String[] args) {
+		// 정수형 타입
+		byte b = (byte) (127+1);
+		System.out.println(b);
+		//왜 128이 나올까? 값이 넘어가버리면 오륜데 그래도 더했다!? 보수 적용
+		short s = 128;
+		int i = 10;
+		long l = 9999999999l;
+		// 실수형 타입
+		float f = 1.1f;
+		double j = 1.1;
+		// 문자형 타입
+		char c = 'a';
+		System.out.println(c);
+		int ic = 97;
+		System.out.println((char)ic);
+		//논리형, 불린형
+		boolean bool = true;
+		while(bool){
+			System.out.println("AHA");
+		}
+	}
+}
