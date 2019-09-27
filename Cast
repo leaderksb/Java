@@ -1,8 +1,11 @@
+
 public class Cast {
 
 	public static void main(String[] args) {
 		int i = 10;
+		int j = 3;
 		double d = 12.3;
+		int result = i/j;
 		
 		d = i;
 		
@@ -13,6 +16,9 @@ public class Cast {
 		
 		System.out.println(i);
 		//잘라내고 값을 넣어줬다
+		
+		System.out.println(result);
+		//정수 나누기는 정수자리만 출력한다
 	}
 
 }
