@@ -1,0 +1,14 @@
+
+public class ConsoleInOut {
+	
+	public static void main(String[] args) {
+		
+		double d = 123.45;
+		System.out.printf("%-10.1f\n",d);
+		
+		System.out.println("abcd");
+		System.out.println("우리나라");
+		System.out.println("당신나라");
+		
+	}
+}
