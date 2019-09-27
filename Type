@@ -20,6 +20,7 @@ public class Type {
 		boolean bool = true;
 		while(bool){
 			System.out.println("AHA");
+		//bool에 true값을 넣어줬기 때문에 문자가 계속 출력된다
 		}
 	}
 }
