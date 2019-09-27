@@ -1,0 +1,10 @@
+import java.io.IOException;
+
+public class PrintInRead {
+
+	public static void main(String[] args) throws IOException {
+		int n = System.in.read();
+		System.out.println(n);
+	}
+
+}
