@@ -19,6 +19,11 @@ public class Cast {
 		
 		System.out.println(result);
 		//정수 나누기는 정수자리만 출력한다
+		
+		System.out.println("1"+"1");
+		System.out.println(1 + 1 + "1");
+		//접합이 된다
+
 	}
 
 }
