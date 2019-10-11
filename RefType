@@ -1,0 +1,40 @@
+
+public class RefType {
+
+	public static void main(String[] args) {
+		
+		String s1 = new String("ABC");
+		String s2 = new String("ABC");
+		String s3 = "ABC";
+		String s4 = "ABC"; //이미 만들어진 값의 주소씀
+		
+		System.out.println(s1);
+		
+		if(s1==s2) {
+			System.out.println("OOOOOO"); //주소는 다르고
+		}
+		
+		if(s1.equals(s2)) {
+			System.out.println("YYYYYY"); //내용물은 같아
+		}
+		
+		Circle c1 = new Circle();
+		System.out.println(c1);
+		Circle c2 = new Circle();
+		System.out.println(c2);
+		
+		c1 = c2; //c2의 주소 값을 c1에 전달. c1이 c2와 같은 값을 가리키게 되는 것이지 값을 복사하는 것이 아님. 
+		
+		if(c1==c2) {
+			System.out.println("111111");
+		}
+		int a = 10;
+		int[] arr = new int[3];
+		System.out.println(arr);
+		
+		Circle c = new Circle();		
+		c.r = 10;
+		System.out.println(c.getArea());
+	}
+
+}
