@@ -1,0 +1,9 @@
+
+public class Circle { //사용자 정의 타입
+	int r; //클래스 속성
+	
+	public double getArea() { //메소드
+		return 3.14 * r * r;
+	
+	}
+}
