@@ -1,0 +1,29 @@
+
+public class ArrayEx {
+
+	public static void main(String[] args) {
+		
+		for (int i = 0; i < args.length; i++) {
+// 		가장 가까운 배열을 가져오는데, 누구를 읽어오는지 확인	
+		}
+		
+//		int[] arr = new int[5];
+//		int[] arr = new int[]{10, 20, 30, 40, 50};
+		int[] arr = {10, 20, 30, 40, 50};
+		int sum = 0;
+		int total = 0;
+		
+		for (int i : arr) {
+			sum += i;
+		}
+		
+		System.out.println("sum = " + sum);
+
+		for (int i = 0; i < arr.length; i++) {
+			total = total + arr[i];
+			System.out.println(arr[i]);
+			System.out.println("total = "+ total);
+		}
+	}
+
+}
