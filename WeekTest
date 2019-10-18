@@ -1,0 +1,13 @@
+
+public class WeekTest {
+
+	public static void main(String[] args) {
+		Week day = Week.MON;
+		System.out.println(day);
+		
+		if(day == Week.FRI) {
+			
+		}
+	}
+
+}
