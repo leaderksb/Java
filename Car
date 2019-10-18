@@ -1,0 +1,25 @@
+
+public class Car {
+	
+	// 1. 속성 - 필드
+	double yb; 	 	//연비
+	String type; 	//차종
+	private String brand; 	//브랜드
+	private int price; 		//가격
+	
+	// 2. 생성자
+	
+	// 3. 행동 - 메소드 setter / getter
+	public void setBrand(String b) {
+		brand = b;
+	}
+	public String getBrand() {
+		return brand;
+	}
+	public void setPrice(int p) {
+		price = p;
+	}
+	public int getPrice() {
+		return price;
+	}
+}
