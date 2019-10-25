@@ -3,6 +3,7 @@ public class PersonTest {
 	public static void main(String[] args) {
 /*		hkd.name = "홍길동";
 		hkd.age = 20;					*/
+		
 		Person hkd = new Person("홍길동", 22);
 /*		hkd.setName("홍길동");
 		String n = hkd.getName();
