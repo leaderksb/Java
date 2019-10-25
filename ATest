@@ -1,0 +1,16 @@
+
+public class ATest {
+
+	public static void main(String[] args) {
+	
+		A a = new A(22);
+		a.printXY();
+		
+		A b = new A();
+		b.printXY();
+		
+		A c = new A(10, 20);
+		c.printXY();
+	}
+
+}
