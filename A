@@ -5,12 +5,14 @@ public class A {
 	private int y;
 	
 	public A() {
-		x = 1;
-		y = 2;
+/*		x = 1;
+		y = 2;		*/
+		this(2);
 	}
 	
 	public A(int x) {
-		this.x = this.y = x;
+//		this.x = this.y = x;
+		this(x, x);
 	}
 	
 	public A(int x, int y) {
