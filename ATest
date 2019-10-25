@@ -2,11 +2,11 @@
 public class ATest {
 
 	public static void main(String[] args) {
-	
-		A a = new A(22);
+		
+		A a = new A();
 		a.printXY();
 		
-		A b = new A();
+		A b = new A(22);
 		b.printXY();
 		
 		A c = new A(10, 20);
