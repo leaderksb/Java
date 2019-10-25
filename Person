@@ -1,0 +1,25 @@
+
+public class Person {
+	// 1. 필드
+	private String name;
+	private int age;
+	
+	// 2. 생성자
+	
+	// 3. 메소드 getter/setter
+	public String getName() {
+		return name;
+	}
+	
+	public void setName(String n) {
+		name = n;
+	}
+	
+	public int getAge() {
+		return age;
+	}
+	
+	public void setAge(int a) {
+		age = a;
+	}
+}
