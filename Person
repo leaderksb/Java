@@ -11,22 +11,22 @@ public class Person {
 	}
 	
 	// 3. 메소드 getter/setter
-
-	public void setName(String n) {
-		name = n;
-	}
 	public String getName() {
 		return name;
 	}
-		
-	public void setAge(int age) {
-		this.age = age;
+	
+	public void setName(String n) {
+		name = n;
 	}
 	
 	public int getAge() {
 		return age;
 	}
-
+	
+	public void setAge(int age) {
+		this.age = age;
+	}
+	
 	public void print() {
 		System.out.println(this.getName() + " : " + age);
 	}
