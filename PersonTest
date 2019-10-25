@@ -1,21 +1,21 @@
 
 public class PersonTest {
 	public static void main(String[] args) {
-		//hkd.name = "홍길동";
-		//hkd.age = 20;
-		Person hkd = new Person();
-		hkd.setName("홍길동");
+/*		hkd.name = "홍길동";
+		hkd.age = 20;					*/
+		Person hkd = new Person("홍길동", 22);
+/*		hkd.setName("홍길동");
 		String n = hkd.getName();
 		System.out.println(n);
 		hkd.setAge(22);
-		System.out.println(hkd.getAge());
+		System.out.println(hkd.getAge());		*/
 		hkd.print();
 		
-		Person kkd = new Person();
-		kkd.setName("김수빈");
+		Person kkd = new Person("김수빈", 18);
+/*		kkd.setName("김수빈");
 		System.out.println(kkd.getName());
 		kkd.setAge(18);
-		System.out.println(kkd.getAge());
+		System.out.println(kkd.getAge());		*/
 		kkd.print();
 	}
 }
