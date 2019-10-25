@@ -9,11 +9,13 @@ public class PersonTest {
 		System.out.println(n);
 		hkd.setAge(22);
 		System.out.println(hkd.getAge());
+		hkd.print();
 		
 		Person kkd = new Person();
 		kkd.setName("김수빈");
 		System.out.println(kkd.getName());
 		kkd.setAge(18);
 		System.out.println(kkd.getAge());
+		kkd.print();
 	}
 }
