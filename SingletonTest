@@ -1,0 +1,10 @@
+
+public class SingletonTest {
+
+	public static void main(String[] args) {
+		Singleton s1 = Singleton.getInstatnce();
+		Singleton s2 = Singleton.getInstatnce();
+		// 싱글톤 객체
+	}
+
+}
