@@ -1,0 +1,4 @@
+
+public class Final {
+	public static final int MAX_VALUE = 10;
+}
