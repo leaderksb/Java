@@ -1,0 +1,11 @@
+
+public class FinalTest {
+
+	public static void main(String[] args) {
+		/*final*/ int a = 10;
+		for (int i = 0; i < Final.MAX_VALUE; i++) {
+		}
+		a = 20;
+	}
+
+}
