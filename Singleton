@@ -1,0 +1,10 @@
+
+public class Singleton {
+	private static Singleton singLeton = new Singleton();
+	
+	private Singleton() {}
+	
+	static Singleton getInstatnce() {
+		return singLeton;
+	}
+}
