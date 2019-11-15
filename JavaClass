@@ -1,0 +1,25 @@
+
+public class JavaClass {
+		private Professor professor;
+		private Student[] students;
+		
+		public JavaClass(Professor professor, Student[] students) {
+			super();
+			this.professor = professor;
+			this.students = students;
+		}
+		
+		public Professor getProfessor() {
+			return professor;
+		}
+		public void setProfessor(Professor professor) {
+			this.professor = professor;
+		}
+		public Student[] getStudents() {
+			return students;
+		}
+		public void setStudents(Student[] students) {
+			this.students = students;
+		}
+		
+}
