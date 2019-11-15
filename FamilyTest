@@ -6,11 +6,14 @@ public class FamilyTest {
 		int[] arr = new int[3];
 		arr[0] = 10;
 		
-		Family[] farr = new Family[3];
+		Family[] farr = {
+				new Family("김찬호", 47, "아빠"),
+				new Family("김은선", 46, "엄마"),
+				new Family("김수빈", 18, "딸")};
 		
-		farr[0] = new Family("김찬호", 47, "아빠");
+/*		farr[0] = new Family("김찬호", 47, "아빠");
 		farr[1] = new Family("김은선", 46, "엄마");
-		farr[2] = new Family("김수빈", 18, "딸");
+		farr[2] = new Family("김수빈", 18, "딸");			*/
 				
 /*		Family f1 = new Family("김찬호", 47, "아빠");
 		Family f2 = new Family("김은선", 46, "엄마");
