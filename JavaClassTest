@@ -25,6 +25,13 @@ public class JavaClassTest {
 		
 		System.out.println("[ 총점 : " + total + " ]");
 		System.out.println("[ 평균 : " + total/s.length + " ]");
+		
+		for(Student student : s) {
+			System.out.println("--------------------");
+			System.out.println("이름 : " + student.getName());
+			System.out.println("학년 : " + student.getGrade());
+			System.out.println("학점 : " + student.getScore());
+		}
 	}
 
 }
