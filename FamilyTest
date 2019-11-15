@@ -1,0 +1,18 @@
+
+public class FamilyTest {
+
+	public static void main(String[] args) {
+		Family f1 = new Family("김찬호", 47, "아빠");
+		Family f2 = new Family("김은선", 46, "엄마");
+		Family f3 = new Family("김수빈", 18, "딸");
+		
+		int total = f1.getAge() + f2.getAge() + f3.getAge();
+/*		int total = 0;
+		total += f1.getAge();
+		total += f2.getAge();
+		total += f3.getAge();		*/
+		
+		System.out.println("[나이 총합 : " + total +"]");
+	}
+
+}
