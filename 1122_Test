@@ -1,0 +1,13 @@
+package override;
+
+public class Test {
+	public static void main(String[] args) {
+		AAA a = new AAA();
+		a.funcA();
+		
+		BBB b = new BBB();
+		b.funcA(); // 오버로딩 - 매개변수 개수
+		b.funcA(1);
+		b.funcB();
+	}
+}
