@@ -1,0 +1,15 @@
+package override;
+
+public class BBB extends AAA {
+	
+	public static final int MAX_VALUE = 10; // 상수
+	
+	public void funcB() {
+		System.out.println("BBB");
+	}
+	
+// @Override
+	public void funcA(int a) { // 오버라이드 - 재정의, 상속관계에서만 허용
+		System.out.println("0.1초");
+	}
+}
