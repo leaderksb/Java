@@ -1,0 +1,7 @@
+package override;
+
+public class AAA {
+	public void funcA() {
+		System.out.println("100초");
+	}
+}
