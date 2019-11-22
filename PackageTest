@@ -1,0 +1,14 @@
+package kr.ac.inhatc.cs.java.test;
+
+import kr.ac.inhatc.cs.java.classes.Package;
+
+//import 단축키 Ctrl+Shift+O
+
+public class PackageTest {
+
+	public static void main(String[] args) {
+		Package p = new Package("김수빈", 18);
+		System.out.println(p);
+	}
+
+}
