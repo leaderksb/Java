@@ -1,0 +1,56 @@
+import java.util.Scanner;
+
+public class StudentTest {
+
+   public static void main(String[] args) {
+      
+// 입력받을 변수타입 (String name, int grade, double score, String department, char sex)
+// 위의 값을 입력받을 scanner sc 선언
+	   Scanner sc = new Scanner(System.in);
+	   
+// 총학생의 수를 string타입으로 입력받아 int형으로 변환하여 number변수에 저장
+     	System.out.print("총학생의 수를 입력하세요 : ");
+     	int number = Integer.parseInt(sc.nextLine());
+     
+// 1차원배열 객체선언
+     	Student[] students = new Student[number];
+
+// for문을 통해 총학생수만큼 반복수행 
+     for (int i = 0; i < students.length; i++) {
+        
+// 총학생의 수를 string타입으로 입력받아 name변수에 저장
+        System.out.print("학생의 성명을 입력하세요 : ");
+        String name = sc.nextLine();
+// 학년을 string타입으로 입력받아 int형으로 변환하여 grade변수에 저장
+        System.out.print("학생의 학년을 입력하세요 : ");
+         int grade = Integer.parseInt(sc.nextLine());
+// 학점을 string타입으로 입력받아 double형으로 변환하여 score변수에 저장
+        System.out.print("학생의 학점을 입력하세요 : ");
+         double score = Double.parseDouble(sc.nextLine());
+// 학과를 string타입으로 입력받아 department변수에 저장
+        System.out.print("학생의 학과를 입력하세요 : ");
+         String department = sc.nextLine();
+// 성별을 string타입으로 입력받아 char형으로 변환하여 인덱스 0의 문자를 sex변수에 저장
+        System.out.print("학생의 성별(M 또는 F)을(를) 입력하세요 : ");
+         char sex = sc.nextLine().charAt(0);
+         
+// 배열에 값 저장
+        students[i] = new Student(name, grade, score, department, sex);
+
+// 총합 값 초기화
+        double total = 0.0;
+        total += students[i].getScore();
+// 구분선
+        System.out.println("------------------------------------------------------------");
+// 학생 정보 전체 출력
+        students[i].print();
+// 총학생 학점의 총점, 평균 출력
+        System.out.println("[ 전체 학생 총점 : " + total + " ]");
+        System.out.println("[ 전체 학생 평균 : " + total/(i+1) + " ]");
+// 구분선
+        System.out.println("------------------------------------------------------------");
+     }
+
+   }
+
+}
