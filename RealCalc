@@ -1,0 +1,14 @@
+package kr.ac.inha.tc.java.abstractclass;
+
+public abstract class RealCalc extends Acalc {
+
+	public int plus(int x, int y) {
+		return x + y;
+	}
+
+	@Override
+	public int sub(int x, int y) {
+		return x - y;
+	}
+	
+}
