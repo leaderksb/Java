@@ -1,0 +1,37 @@
+package kr.ac.inha.tc.java.type;
+
+public class Test {
+
+	public static void main(String[] args) {
+		A a= new A();
+		a.printA();
+		
+		B b = new B();
+		b.printA();
+		b.printB();
+		
+		A aa = new B(); // 다운캐스트
+		aa.printA();	// 동적바이딩 - 부모를 불렀지만 자식을 호출함
+
+		B bb = (B) aa;	// 업캐스트
+		bb.printA();
+		bb.printB();
+		
+		func(a);
+		func(b);
+		
+	}
+
+	private static void func(A obj) {
+		obj.printA();
+	}
+	
+//	private static void func(A a) {
+//		
+//	}
+//	
+//	private static void func(B b) {
+//		
+//	}
+	
+}
