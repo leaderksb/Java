@@ -1,0 +1,10 @@
+package kr.ac.inha.tc.java.abstractclass;
+
+public class Line extends Shape {
+
+	@Override
+	public void draw() {
+		System.out.println("선 그리기");
+	}
+
+}
