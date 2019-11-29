@@ -1,0 +1,10 @@
+package kr.ac.inha.tc.java.type;
+
+public class B extends A {
+	public void printB() {
+		System.out.println("BBB");
+	}
+	public void printA() {
+		System.out.println("BBB-AAA");
+		}
+}
