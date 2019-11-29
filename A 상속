@@ -1,0 +1,7 @@
+package kr.ac.inha.tc.java.type;
+
+public class A {
+	public void printA() {
+		System.out.println("AAA");
+	}
+}
