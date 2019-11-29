@@ -1,0 +1,26 @@
+package kr.ac.inha.tc.java.type;
+
+import java.util.Vector;
+
+public class VectorEx {
+
+	public static void main(String[] args) {
+		Vector<Integer> vec = new Vector<Integer>();
+		
+//		Vector vec = new Vector();
+		vec.add(1);
+		vec.add(2);
+		vec.add(22);
+
+		for (int i = 0; i < vec.size(); i++) {
+			Integer obj = (Integer) vec.get(i);
+			System.out.println(obj.intValue());
+		}
+		
+/*		for (int i = 0; i < vec.size(); i++) {
+			Integer obj = (Integer) vec.get(i);
+			System.out.println(obj.intValue());
+		}		*/
+	}
+
+}
