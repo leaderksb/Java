@@ -1,0 +1,8 @@
+package kr.ac.inha.tc.java.abstractclass;
+
+public class RealRealCalc extends RealCalc {
+	@Override
+	public int add(int x, int y) {
+		return x + y;
+	}
+}
