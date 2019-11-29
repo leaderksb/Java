@@ -1,0 +1,6 @@
+package kr.ac.inha.tc.java.abstractclass;
+
+public abstract class Acalc {
+	public abstract int add(int x, int y);
+	public abstract int sub(int x, int y);
+}
