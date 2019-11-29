@@ -1,0 +1,26 @@
+package kr.ac.inha.tc.java.abstractclass;
+
+public class Test {
+
+	public static void main(String[] args) {
+
+//		추상 클래스는 안만든다
+		
+		Shape s = new Rect();
+		s.draw();
+//		Rect r = new Rect();
+//		r.draw();
+
+		
+		s = new Circle();
+		s.draw();
+//		Circle c = new Circle();
+//		c.draw();
+		
+		s = new Line();
+		s.draw();
+//		Line l = new Line();
+//		l.draw();
+
+	}
+}
