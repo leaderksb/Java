@@ -6,7 +6,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-public class Main extends JFrame{
+public class GoogleMapMain extends JFrame{
 
 	private JTextField textField = new JTextField(30);
 	private JButton button = new JButton("검색");
@@ -15,7 +15,7 @@ public class Main extends JFrame{
 	private String location = "서울";
 	private JLabel googleMap;
 	
-	public Main() {
+	public GoogleMapMain() {
 		setLayout(new BorderLayout());
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setResizable(false);
