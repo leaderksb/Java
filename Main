@@ -1,0 +1,37 @@
+import java.awt.BorderLayout;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class Main extends JFrame{
+
+	private JTextField textField = new JTextField(30);
+	private JButton button = new JButton("검색");
+	private JPanel panel = new JPanel();
+	private GoogleAPI googleAPI = new GoogleAPI();
+	private String location = "서울";
+	private JLabel googleMap;
+	
+	public Main() {
+		setLayout(new BorderLayout());
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setResizable(false);
+		setTitle("Google Maps");
+		setVisible(true);
+		
+		panel.add(textField);
+		panel.add(button);
+		
+		googleAPI.downloadMap(location);
+		googleMap = new JLabel(googleAPI.getMap(location));
+		googleAPI.fileDelete(location);
+		
+		add(BorderLayout.NORTH, panel);
+		add(BorderLayout.SOUTH, googleMap);
+		pack();
+	}
+
+}
