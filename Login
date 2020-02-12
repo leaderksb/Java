@@ -1,0 +1,66 @@
+package JFrame;
+
+import java.awt.BorderLayout;
+import java.awt.GridLayout;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
+
+public class Login extends JFrame {
+
+	public Login() {
+		
+		setTitle("Login");
+		JPanel panel1 = new JPanel();
+		JButton buttonL = new JButton("로그인");
+		JPanel panel2 = new JPanel();
+		JButton buttonS = new JButton("회원가입");
+		JPanel panelA = new JPanel();
+		
+		JTextField id = new JTextField(10);
+		JPasswordField pw = new JPasswordField(10);
+		JPanel panel3 = new JPanel();
+		JPanel panel4 = new JPanel();
+		JPanel panel5 = new JPanel();
+		JPanel panel6 = new JPanel();
+		JPanel panelB = new JPanel();
+		JLabel label1 = new JLabel("UserId");
+		JLabel label2 = new JLabel("PassWord");
+		
+		setLayout(new BorderLayout());
+		
+		panel1.add(buttonL);
+		panel2.add(buttonS);
+		panelA.setLayout(new GridLayout(2, 0));
+		panelA.add(panel1);
+		panelA.add(panel2);
+		
+		panel3.add(id);
+		panel4.add(pw);
+		panel5.add(label1);
+		panel6.add(label2);
+		panelB.setLayout(new GridLayout(2, 0));
+		panelB.add(panel5);
+		panelB.add(panel3);
+		panelB.add(panel6);
+		panelB.add(panel4);
+		
+		add(panelA, BorderLayout.EAST);
+		add(panelB, BorderLayout.WEST);
+
+		setResizable(false);
+		setVisible(true);
+		setSize(370, 100);
+		setLocationRelativeTo(null);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+	
+	public static void main(String[] args) {
+		new Login();
+	}
+}
+
