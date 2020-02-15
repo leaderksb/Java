@@ -74,8 +74,6 @@ public class Login2 extends JFrame implements ActionListener{
 		add(westPan, BorderLayout.WEST);
 	}
 	
-	
-	
 	public static void main(String[] args) {
 		new Login2();
 	}
@@ -120,7 +118,7 @@ public class Login2 extends JFrame implements ActionListener{
 		            while(rs.next()) {
 		            	if(rs.getString("id").equals(this.id.getText()) && rs.getString("pw").equals(this.pw.getText())) {
 		            		System.out.println("로그인 성공");
-	                    }
+	                    	}
 		            }
 		         } catch (ClassNotFoundException e1) {
 		            System.out.println("jdbc driver 로딩 실패");
