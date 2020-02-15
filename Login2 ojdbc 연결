@@ -40,6 +40,7 @@ public class Login2 extends JFrame implements ActionListener{
 		pw = new JTextField("pw를 입력하세요", 10);
 		
 		JPanel center = new JPanel();
+		
 		center.setLayout(new GridLayout(2, 0));
 		
 		c_Pan1.add(id);
@@ -84,8 +85,7 @@ public class Login2 extends JFrame implements ActionListener{
 		
 		String id ="kim";
 		String pw = "1234";
-		
-		
+
 		if(obj == Login_btn) {
 //			if(this.id.getText().equals(id) && this.pw.getText().equals(pw)) {
 //				JFrame test = new JFrame();
