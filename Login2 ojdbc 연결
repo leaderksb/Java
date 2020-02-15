@@ -1,0 +1,133 @@
+package JFrame;
+
+import java.awt.BorderLayout;
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class Login2 extends JFrame implements ActionListener{
+	
+	private JButton Login_btn;
+	private JTextField id;
+	private JTextField pw;
+
+	public Login2() {
+		setTitle("멍멍이 멍총이");
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setLocationRelativeTo(null);
+		setSize(350, 350);
+		
+		center();
+		west();
+		setVisible(true);
+	}
+	
+	private void center() {
+		JPanel c_Pan1 = new JPanel();
+		JPanel c_Pan2 = new JPanel();
+		
+		id = new JTextField("id를 입력하세요", 10);
+		pw = new JTextField("pw를 입력하세요", 10);
+		
+		JPanel center = new JPanel();
+		center.setLayout(new GridLayout(2, 0));
+		
+		c_Pan1.add(id);
+		c_Pan2.add(pw);
+		
+		center.add(c_Pan1);
+		center.add(c_Pan2);
+		
+		add(center, BorderLayout.CENTER);
+	}
+
+	private void west() {
+		JPanel w_Pan1 = new JPanel();
+		JPanel w_Pan2 = new JPanel();
+		JPanel westPan = new JPanel();
+		
+		Login_btn = new JButton("로그인");
+		Login_btn.addActionListener(this);
+		JButton SignUp_btn = new JButton("회원가입");
+		
+		w_Pan1.add(Login_btn);
+		w_Pan2.add(SignUp_btn);
+		
+		westPan.add(w_Pan1);
+		westPan.add(w_Pan2);
+		add(westPan, BorderLayout.WEST);
+		
+		westPan.setLayout(new GridLayout(2, 0));
+		
+		westPan.add(w_Pan1);
+		westPan.add(w_Pan2);
+		add(westPan, BorderLayout.WEST);
+	}
+	
+	
+	
+	public static void main(String[] args) {
+		new Login2();
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		Object obj = e.getSource();
+		
+		String id ="kim";
+		String pw = "1234";
+		
+		
+		if(obj == Login_btn) {
+//			if(this.id.getText().equals(id) && this.pw.getText().equals(pw)) {
+//				JFrame test = new JFrame();
+//				test.setTitle("JFrame");
+//				test.setDefaultCloseOperation(EXIT_ON_CLOSE);
+//				test.setSize(350, 350);
+//				test.setLocationRelativeTo(null);
+//				this.setVisible(false);
+//				test.setVisible(true);
+//			}
+		      String driver = "oracle.jdbc.driver.OracleDriver";
+		         String url = "jdbc:oracle:thin:@203.128.183.151:1521:xe";
+		         String user = "test1";
+		         String password = "1234";
+		         try {
+		            Class.forName(driver);
+		            System.out.println("jdbc driver 로딩 성공");
+		            Connection conn = DriverManager.getConnection(url, user, password);
+		            System.out.println("오라클 연결 성공");
+		            Statement stmt = conn.createStatement();
+		            
+		            //검색
+		            ResultSet rs = stmt.executeQuery("Select * from login");
+		            //삽입
+		            //stmt.executeQuery("Insert into login values('jjs','1234')");
+		            //수정
+		            //stmt.executeQuery("Update login set id = 'mmd' where id = 'kim'");
+		            //삭제
+		            //stmt.executeQuery("delete from login where id = 'jjs'");
+		            while(rs.next()) {
+		            	if(rs.getString("id").equals(this.id.getText()) && rs.getString("pw").equals(this.pw.getText())) {
+		            		System.out.println("로그인 성공");
+	                    }
+		            }
+		         } catch (ClassNotFoundException e1) {
+		            System.out.println("jdbc driver 로딩 실패");
+		         } catch (SQLException e2) {
+		            System.out.println("오라클 연결 실패");
+		         }
+			System.out.println("멍멍이 댕댕해");
+		}
+	}
+}
