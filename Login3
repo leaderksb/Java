@@ -38,7 +38,16 @@ public class Login3 extends JFrame {
 		button1.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				area.append("You are amazing\n");
+				//area.append("You are amazing\n");
+				label.setText(area.getText());
+			}
+		});
+		
+		button2.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				System.exit(0);
 			}
 		});
 		
@@ -53,4 +62,3 @@ public class Login3 extends JFrame {
 		new Login3();
 	}
 }
-
