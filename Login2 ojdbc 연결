@@ -23,9 +23,9 @@ public class Login2 extends JFrame implements ActionListener{
 
 	public Login2() {
 		setTitle("멍멍이 멍총이");
-		setDefaultCloseOperation(EXIT_ON_CLOSE);
-		setLocationRelativeTo(null);
 		setSize(350, 350);
+		setLocationRelativeTo(null);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		
 		center();
 		west();
