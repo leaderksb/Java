@@ -17,14 +17,13 @@ public class JFrameNum04 extends JFrame implements ActionListener{
    private JButton btn2;
    private JTextField jtf1;
    private JTextField jtf2;
-   private String ID = "김수빈";
-   private String PW = "1234";
+   String ID = "김수빈";
+   String PW = "1234";
    
    public JFrameNum04() {
-      // TODO Auto-generated constructor stub
-      setDefaultCloseOperation(EXIT_ON_CLOSE);
       setSize(340,110);
       setLocationRelativeTo(null);
+      setDefaultCloseOperation(EXIT_ON_CLOSE);
       
       JPanel pan1 = new JPanel();
       JPanel pan2 = new JPanel();
@@ -35,11 +34,10 @@ public class JFrameNum04 extends JFrame implements ActionListener{
       pan1.add(btn1);
       pan2.add(btn2);
       
-      
       btn1.addActionListener(this); // 자기 자신에게있는 재정의된 인터페이스 메소드를 btn1을 눌렀을때 실행
       btn2.addActionListener(this);
       
-      setLayout(new BorderLayout()); //프레임을 BorderLayout으로 설정
+      setLayout(new BorderLayout()); // 프레임을 BorderLayout으로 설정
       
       JPanel pan3 = new JPanel(); // 이전에 생성한 버튼 달린 패널을 2개 합칠 패널 생성
       pan3.setLayout(new GridLayout(2,0)); // 패널 2개로 쪼갬
@@ -70,33 +68,31 @@ public class JFrameNum04 extends JFrame implements ActionListener{
       
       setVisible(true);
    }
-   public static void main(String[] args) {
-      new Login();
-   }
    
    // 인터페이스 메소드 재정의 
-   @Override //재정의 됐다는걸 명시적으로 표시
-   public void actionPerformed(ActionEvent arg0) {
-      // TODO Auto-generated method stub
-      Object obj = arg0.getSource(); // 특정 행동을 한 버튼의 주소를 오브젝트 (최상위 클래스)에 저장
+   @Override // 재정의 됐다는걸 명시적으로 표시
+   public void actionPerformed(ActionEvent e) {
+      Object obj = e.getSource(); // 특정 행동을 한 버튼의 주소를 오브젝트 (최상위 클래스)에 저장
       // 만약에 btn1을 눌렀을 때
       if(obj == btn1) {
          if(ID.equals(jtf1.getText()) && PW.equals(jtf2.getText())) { //전역변수로 설정한 ID, PW와 JTextField에 적힌 Text와 같다면 (김수빈 , 1234)
             
+            // 기존 로그인 창을 숨김
+            setVisible(false);
+             
             JFrame jf = new JFrame(); // 창을 하나 새로 띄움
             jf.setTitle("그저 창일 뿐");
             jf.setSize(300,200);
-            jf.setDefaultCloseOperation(EXIT_ON_CLOSE);
             jf.setLocationRelativeTo(null);
-            jf.setVisible(true); 
-            
-            //기존 로그인 창을 숨김
-            setVisible(false);
-         }
-         // 같지 않다면
-         else {
+            jf.setDefaultCloseOperation(EXIT_ON_CLOSE);
+            jf.setVisible(true);  
+         }else { // 같지 않다면
             JOptionPane.showMessageDialog(null, "ID와 PW가 같지 않습니다!");
          }
       }
    }
+   
+   public static void main(String[] args) {
+	      new Login();
+	   }
 }
