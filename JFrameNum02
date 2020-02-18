@@ -1,0 +1,20 @@
+package JFrame;
+
+import javax.swing.JFrame;
+
+public class JFrameNum02 extends JFrame {
+	
+	public JFrameNum02() {
+		setTitle("김수빈"); //제목지정
+		setSize(200, 300); //창크기
+		setLocationRelativeTo(null); //가운데로 놓기
+		setDefaultCloseOperation(EXIT_ON_CLOSE); //이클립스 종료시 프로그램 끄기
+		setVisible(true); //창보이게 하기
+		// 컨텐트페인 베이스부분
+	}
+	
+	public static void main(String[] args) {
+		new JFrameNum02();
+	}
+	
+}
