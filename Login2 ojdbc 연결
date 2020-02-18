@@ -96,7 +96,7 @@ public class Login2 extends JFrame implements ActionListener{
 //				this.setVisible(false);
 //				test.setVisible(true);
 //			}
-		      String driver = "oracle.jdbc.driver.OracleDriver";
+		         String driver = "oracle.jdbc.driver.OracleDriver";
 		         String url = "jdbc:oracle:thin:@203.128.183.151:1521:xe";
 		         String user = "test1";
 		         String password = "1234";
