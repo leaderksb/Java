@@ -1,0 +1,64 @@
+
+import java.awt.BorderLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JPasswordField;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+
+public class JFrameNum01 extends JFrame {
+
+	public JFrameNum01() {
+		
+		setTitle("Login");
+		JPanel panel1 = new JPanel();
+		JPanel panel2 = new JPanel();
+		JButton button1 = new JButton("Click me!");
+		JButton button2 = new JButton("Exit");
+		JLabel label = new JLabel("Some text");
+		JTextArea area = new JTextArea();
+		JTextField field = new JTextField(55);
+				
+		JTextField id = new JTextField(10);
+		JPasswordField pw = new JPasswordField(10);
+		
+		setLayout(new BorderLayout());
+		
+		panel1.add(button1);
+		panel1.add(button2);
+		add(label, BorderLayout.NORTH);
+		add(panel1, BorderLayout.WEST);
+		add(area, BorderLayout.CENTER);
+
+		button1.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				//area.append("You are amazing\n");
+				label.setText(area.getText());
+			}
+		});
+		
+		button2.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				System.exit(0);
+			}
+		});
+		
+		setResizable(false);
+		setVisible(true);
+		setSize(800, 800);
+		setLocationRelativeTo(null);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+	
+	public static void main(String[] args) {
+		new Login3();
+	}
+}
