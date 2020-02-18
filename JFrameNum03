@@ -1,0 +1,32 @@
+package JFrame;
+
+import java.awt.FlowLayout;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import javax.swing.JFrame;
+
+public class JFrameNum03 extends JFrame {
+	
+	public JFrameNum03() {
+		setTitle("김수빈의 UI"); // 타이틀 상단바 제목지정
+		setDefaultCloseOperation(EXIT_ON_CLOSE); // UI창 닫을시 JVM 자동종료
+		setSize(200, 300); // UI창 크기조절
+		setLocationRelativeTo(null); // UI창 윈도우즈 내에서 중앙에 위치하게
+		setLayout(new FlowLayout()); // 해당 컴포넌트의 레이아웃 매니저설정(컴포넌트 위치 자동맞춤) FlowLayout -> 컴포넌트들의 위치를(아무 설정 없을시) 왼쪽에서부터 오른쪽 순서대로 정렬
+		// setLayout(new BorderLayout()); BorderLayout -> 컴포넌트들의 위치를 동'서'남'북'중앙으로 정렬
+		// setLayout(new GridLayout(2, 3)); 2x3 바둑판식 배열로 컴포넌트 자동정렬, 이때 add한 순서대로 컴포넌트가 들어감
+		JButton jbutton = new JButton("이것은 버튼입니다."); // 버튼 생성법
+		JLabel jlable = new JLabel("이것은 JTextArea입니다."); // 텍스트 에어리아 생성법
+		JTextField jtextfield = new JTextField("이것은 JTextField입니다."); // 텍스트 필드 생성법
+		add(jbutton); // 컴포넌트에 컴포넌트 추가. 컴포넌트 안에 컴포넌트가 들어갈 수 있음. 물론 컨텐트페인에 컴포넌트가 들어갈 수 있음. 앞에 아무것도 안붙이면 컨텐트페인(JFrame)에 붙이겠다는 것
+		add(jlable);
+		add(jtextfield);
+		setVisible(true); // UI창 보이게
+		// setVisible(false); 창 안보이게
+	}
+	
+	public static void main(String[] args) {
+		JFrameNum03 num02 = new JFrameNum03();
+	}
+}
