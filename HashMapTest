@@ -22,6 +22,14 @@ public class HashMapTest {
  * Key 이름 : 사전의 사과, 중복불가
  * Value 뜻 : 동그란 모양을 가지고 있는 빨간색 과일, 중복가능
  */
+		ArrayList<HashMap<Object, Object>> test = GetDBHash();
+	
+		for (HashMap<Object, Object> hashMap2 : test) {
+			System.out.println(hashMap2);
+		}
+	}
+
+	public static ArrayList<HashMap<Object, Object>> GetDBHash() {
 		ArrayList<String> arrayList = new ArrayList<String>();
 		arrayList.add("aa");
 		arrayList.add("bb");
@@ -58,11 +66,7 @@ public class HashMapTest {
 		            	
 		            	arrayListHash.add(hashMap1);
 		            }
-		            
-		            for (HashMap<Object, Object> hashMap2 : arrayListHash) {
-						System.out.println(hashMap2);
-					}
-		            
+		            	            
 		            System.out.println(arrayListHash.get(1).get("RGNO"));
 		         
 		         } catch (ClassNotFoundException e1) {
@@ -70,6 +74,7 @@ public class HashMapTest {
 		         } catch (SQLException e2) {
 		            System.out.println("오라클 연결 실패");
 		         }
+		    return arrayListHash;
 	}
 
 }
