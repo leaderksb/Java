@@ -1,0 +1,22 @@
+package JavaStudy;
+
+import java.awt.GridLayout;
+
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+public class CustomJPanel extends JPanel{
+	public CustomJPanel(String STNO, String SBNO, String RGNO, String RGDATE, String RGSCORE) {
+		setLayout(new GridLayout(2, 5));
+		add(new JLabel("학생 번호"));
+		add(new JLabel("과목 번호"));
+		add(new JLabel("성적 번호"));
+		add(new JLabel("성적 날짜"));
+		add(new JLabel("성적 점수"));
+		add(new JLabel(STNO));
+		add(new JLabel(SBNO));
+		add(new JLabel(RGNO));
+		add(new JLabel(RGDATE));
+		add(new JLabel(RGSCORE));
+	}
+}
