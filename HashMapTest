@@ -1,0 +1,75 @@
+package JavaStudy;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.HashMap;
+
+public class HashMapTest {
+
+	public static void main(String[] args) {
+		HashMap<Object, Object> hashMap = new HashMap<Object, Object>();
+		
+		hashMap.put(2, 3);
+		System.out.println(hashMap.get(2));
+		String[] a = {"aa", "bb", "cc"};
+		hashMap.remove(2);
+		System.out.println(hashMap.get(2));
+/*	
+ * Key 이름 : 사전의 사과, 중복불가
+ * Value 뜻 : 동그란 모양을 가지고 있는 빨간색 과일, 중복가능
+ */
+		ArrayList<String> arrayList = new ArrayList<String>();
+		arrayList.add("aa");
+		arrayList.add("bb");
+		arrayList.add("cc");
+		arrayList.add("dd");
+		System.out.println(arrayList);
+		System.out.println(arrayList.get(0));
+		System.out.println(arrayList.size());
+		System.out.println(arrayList.remove(0));
+		System.out.println(arrayList);
+		
+		ArrayList<HashMap<Object, Object>> arrayListHash = new ArrayList<HashMap<Object,Object>>();
+		
+		         String driver = "oracle.jdbc.driver.OracleDriver";
+		         String url = "jdbc:oracle:thin:@localhost:1522:xe";
+		         String user = "test1";
+		         String password = "1234";
+		         
+		         try {
+		            Class.forName(driver);
+		            System.out.println("jdbc driver 로딩 성공");
+		            Connection conn = DriverManager.getConnection(url, user, password);
+		            System.out.println("오라클 연결 성공");
+		            Statement stmt = conn.createStatement();
+		            ResultSet rs = stmt.executeQuery("select * from register");
+		            
+		            while(rs.next()) {
+		            	HashMap<Object, Object> hashMap1 = new HashMap<Object, Object>();
+		            	hashMap1.put("RGNO", rs.getString("RGNO"));
+		            	hashMap1.put("STNO", rs.getString("STNO"));
+		            	hashMap1.put("SBNO", rs.getString("SBNO"));
+		            	hashMap1.put("RGDATE", rs.getString("RGDATE").split(" ")[0]);
+		            	hashMap1.put("RGSCORE", rs.getString("RGSCORE") == null ?  "데이터 없음" : rs.getString("RGSCORE"));
+		            	
+		            	arrayListHash.add(hashMap1);
+		            }
+		            
+		            for (HashMap<Object, Object> hashMap2 : arrayListHash) {
+						System.out.println(hashMap2);
+					}
+		            
+		            System.out.println(arrayListHash.get(1).get("RGNO"));
+		         
+		         } catch (ClassNotFoundException e1) {
+		            System.out.println("jdbc driver 로딩 실패");
+		         } catch (SQLException e2) {
+		            System.out.println("오라클 연결 실패");
+		         }
+	}
+
+}
