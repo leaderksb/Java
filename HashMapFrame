@@ -1,0 +1,33 @@
+package JavaStudy;
+
+import java.awt.FlowLayout;
+import java.util.ArrayList;
+import java.util.HashMap;
+
+import javax.swing.JFrame;
+
+public class HashMapFrame extends JFrame{
+	public HashMapFrame() {
+		setTitle("성적 정보");
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setSize(500, 500);
+		setLocationRelativeTo(null);
+		
+		setLayout(new FlowLayout());
+		
+		HashMapTest getDB = new HashMapTest();
+		ArrayList<HashMap<Object, Object>> list = getDB.GetDBHash();
+
+		for (HashMap<Object, Object> hashMap : list) {
+			CustomJPanel info = new CustomJPanel((String)hashMap.get("RGNO"), (String)hashMap.get("SBNO"), (String)hashMap.get("RGNO"), (String)hashMap.get("RGDATE"), (String)hashMap.get("RGSCORE"));
+			add(info);
+		}
+		
+		setVisible(true);
+	}
+	
+	public static void main(String[] args) {
+		new HashMapFrame();
+	}
+	
+}
