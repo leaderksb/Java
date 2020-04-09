@@ -1,0 +1,19 @@
+package sec01.exam03;
+
+public class ArrayIndexOutOfBoundsExceptionExample02 {
+	
+	public static void main(String[] args) {
+		if(args.length == 2) {
+		String data1 = args[0];
+		String data2 = args[1];
+		
+		System.out.println(data1);
+		System.out.println(data2);
+		} else {
+			System.out.println("두 개의 실행 매개값이 필요합니다.");
+		}
+	}
+	
+}
+//만약 args의 배열에 크기가 2일 경우, data1과 data2의 값을 출력한다.
+//아닐 경우, 문장을 출력한다.
