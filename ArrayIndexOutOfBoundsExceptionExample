@@ -1,0 +1,21 @@
+package sec01.exam02;
+
+public class ArrayIndexOutOfBoundsExceptionExample {
+	
+	public static void main(String[] args) {
+		int arr[] = {1, 2, 3};
+		
+		int result = arr[0] + arr[2];
+
+		String data1 = args[0];
+		String data2 = args[1];
+		
+		System.out.println(data1);
+		System.out.println(data2);
+	}
+	
+}
+//args의 배열의 값을 data1과 data2에 넣어야 하는데 args 배열 값이 비어있기 때문에
+//ArrayIndexOutOfBoundsException 이 발생하는 것을 볼 수 있다.
+//이 오류를 해결하려면 args의 배열에 값을 넣어주면 된다.
+//Run 버튼의 우측에 [▼] 클릭 -> [RunConfigurations...] 클릭 -> [Arguments] 클릭 -> 띄어쓰기로 값을 구분하여 입력 -> 오류 해결
