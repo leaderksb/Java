@@ -1,0 +1,19 @@
+package sec01.exam04;
+
+public class NumberFormatExceptionExample {
+
+	public static void main(String[] args) {
+		String data1 = "100";
+		String data2 = "a100";
+		
+		int value1 = Integer.parseInt(data1);
+		System.out.println(value1);
+
+		int value2 = Integer.parseInt(data2);
+	}
+
+}
+//data2에 문자와 int형을 합쳐 문자열로 넣었다.
+//함수를 사용하여 String data2값을 int형으로 변환 하였으나,
+//data2에서 문자 a값은 int형 변환이 불가능해
+//NumberFormatException이 발생하는 것을 볼 수 있다.
