@@ -1,0 +1,20 @@
+package sec02.exam05;
+
+public class ThrowsExample {
+
+	public static void main(String[] args) {
+		//main에서 오류발생
+			try {
+				findClass();
+				System.out.println("클래스가 존재합니다.");
+			} catch (ClassNotFoundException e) {
+				System.out.println("클래스가 존재하지 않습니다.");
+		//오류가 왜 발생했는지 출력해준다.
+				e.printStackTrace();
+			}
+	}
+	public static void findClass() throws ClassNotFoundException {
+		//클래스를 찾지 못해 오류발생 throws문으로 처리
+		Class cla = Class.forName("java.lang.String");
+	}
+}
