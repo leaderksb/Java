@@ -1,6 +1,6 @@
 package sec01.exam02;
 
-public class ArrayIndexOutOfBoundsExceptionExample {
+public class ArrayIndexOutOfBoundsExceptionExample01 {
 	
 	public static void main(String[] args) {
 		int arr[] = {1, 2, 3};
