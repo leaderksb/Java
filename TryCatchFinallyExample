@@ -1,0 +1,23 @@
+package sec02.exam01;
+
+public class TryCatchFinallyExample {
+
+	public static void main(String[] args) {
+		/*String str = null;
+		System.out.println(str.length());*/
+
+		try {
+			//예외 발생가능 코드
+			//오류 미발생시 정상실행
+			Class cla = Class.forName("java.lang.String2");
+			System.out.println("정상실행");
+		} catch (ClassNotFoundException e) {
+			//오류 발생시 실행
+			System.out.println("클래스가 존재하지 않습니다.");
+		} finally {
+			//오류 발생 or 비발생 여부 상관없이 반드시 실행
+			System.out.println("교수님 안녕하세요! \\(>ㅅ<*)/ ");
+		}
+	}
+
+}
