@@ -1,0 +1,92 @@
+package swing.frame;
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.FlowLayout;
+import java.awt.GridLayout;
+
+import javax.swing.BorderFactory;
+import javax.swing.JButton;
+import javax.swing.JCheckBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class ContainerComponent extends JFrame{
+
+	public ContainerComponent() {
+		
+		//레이아웃 디폴트 값 BorderLayout이 적용된 상태
+		
+		JPanel panW = new JPanel();
+		//BorderLayout에 WEST로 설정할 JPanel 생성
+		JPanel panE = new JPanel();
+		//BorderLayout에 EAST로 설정할 JPanel 생성
+		JPanel panA = new JPanel();
+		//panW와 panE를 붙일 JPanel 생성
+		
+		JLabel labI = new JLabel("Type ID");
+		//JLabel 생성
+		labI.setHorizontalAlignment(JLabel.CENTER);
+		//JLabel 내의 텍스트를 중앙 정렬
+		
+		JLabel labP = new JLabel("Type Password");
+		labP.setHorizontalAlignment(JLabel.CENTER);
+		
+		JLabel labC = new JLabel("Please Check!!");
+		labC.setHorizontalAlignment(JLabel.CENTER);
+
+		panW.setLayout(new GridLayout(5, 1, 5, 5));
+		//행 5 열 1 좌우 여백 5 GridLayout 적용
+		panW.add(labI);
+		//panW에 labI를 붙임
+		panW.add(new JTextField(10));
+		//칸이 10인 JTextField 생성 및 붙임
+		panW.add(labP);
+		panW.add(new JTextField(10));
+		panW.setBorder(BorderFactory.createEmptyBorder(0, 20, 0, 20));
+		//JPanel에 내부공백 설정
+		panW.setBackground(Color.YELLOW);
+		//panW에 BackgroundColor을 YELLOW로 설정
+		panA.add(panW, BorderLayout.WEST);
+		//panW를 panA에 WEST에 붙임
+		
+		panE.setLayout(new GridLayout(4, 1, 5, 5));
+		//행 4 열 1 좌우 여백 5 GridLayout 적용
+		panE.add(labC);
+		panE.add(new JCheckBox("C# JCheckBox"));
+		panE.add(new JCheckBox("C++ JCheckBox"));
+		//JCheckBox 생성 및 붙임
+		panE.setBorder(BorderFactory.createEmptyBorder(0, 20, 12, 20));
+		//JPanel에 내부공백 설정
+		panE.setBackground(Color.GREEN);
+		//panW에 BackgroundColor을 GREEN으로 설정
+		panA.add(panE, BorderLayout.EAST);
+		//panE를 panA에 EAST에 붙임
+		
+		panA.setLayout(new FlowLayout());
+		//panA에 FlowLayout 적용
+		panA.add(new JButton("OK"));
+		//JButton 생성 및 붙임
+		add(panA);
+		//panA를 JFrame(최상위 컨테이너)에 붙임
+		
+		setTitle("Container & Component");
+		//제목 설정
+		setSize(350, 230);
+		//크기 설정
+		setLocationRelativeTo(this);
+		//중앙 배치
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		//창 닫을시 프로그램 종료
+		setVisible(true);
+		//창 띄우기
+	}
+	
+	public static void main(String[] args) {
+		new ContainerComponent();
+		//생성자 실행
+	}
+
+}
