@@ -1,0 +1,67 @@
+package swing.frame;
+
+import java.awt.BorderLayout;
+import java.awt.FlowLayout;
+import java.awt.GridLayout;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+public class NoLayoutFrame extends JFrame {
+
+	public NoLayoutFrame(String title, int width, int height) {
+		
+		//레이아웃
+		//레이아웃 매니저가 관리를 해줌
+		setLayout(null);
+		
+		JButton b1 = new JButton("1");
+		b1.setSize(50, 25);
+		b1.setLocation(10, 10);
+		add(b1);
+		
+		JButton b2 = new JButton("2");
+		b2.setSize(50, 25);
+		//버튼 크기 설정
+		b2.setLocation(10, 50);
+		//버튼 위치 설정
+		add(b2);
+		
+		JButton b3 = new JButton("3");
+		b3.setBounds(100, 100, 100, 20);
+		//버튼 크기와 위치 동시 설정
+		add(b3);
+		
+		JButton b4 = new JButton("4");
+		b4.setBounds(100, 50, 50, 25);
+		add(b4);
+		
+		JButton b5 = new JButton("5");
+		b5.setBounds(150, 50, 50, 25);
+		add(b5);
+		
+		JButton b6 = new JButton("6");
+		b6.setBounds(300, 200, 50, 25);
+		add(b6);
+		
+		setTitle(title);
+		//제목 설정
+		setSize(width, height);
+		//크기 설정
+		//setLocation(1200, 200);
+		//창을 원하는 위치로 조절
+		setLocationRelativeTo(this);
+		//중앙 배치
+		setVisible(true);
+		//창 띄우기
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		//창을 닫을시 프로그램 종료
+	}
+	public static void main(String[] args) {
+		new NoLayoutFrame("NoLayoutFrame", 400, 300);
+		//생성자 불러오기
+	}
+
+}
